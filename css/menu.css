@@ -128,16 +128,15 @@ table {
   border-spacing: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 html {
   max-width: 1920px;
   min-width: 428px;
   font-size: 62.5%;
 }
-
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
@@ -325,16 +324,76 @@ footer p {
 /* mobile media query */
 @media (max-width: 428px) {
   /* header section */
-  .header-title {
-    width: 75%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 4rem;
+  header {
+    min-height: 200%;
+  }
+
+  header a h1 {
+    font-size: 5.4rem;
+  }
+
+  ul.links {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  ul.icons {
+    margin: 1rem 35% 1rem 35%;
+  }
+
+  /* gallery section */
+  .gallery h2 {
+    font-size: 4.5rem;
+  }
+  .gallery img {
+    width: 100%;
+    margin: 2rem 0;
   }
 
   /* menu */
   .menu {
+    color: rgb(0, 4, 17);
     background-image: none;
+    width: 100%;
+    text-align: center;
+  }
+  .menu h2 {
+    border-bottom: 2rem solid rgb(0, 4, 17);
+    width: 85%;
+    margin: 0 7.5%;
+  }
+
+  .menu-container {
+    width: 100%;
+    background-color: rgb(225, 239, 230);
+  }
+  .menu-section {
+    width: 90%;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .menu-section h3 {
+    border: 5px solid rgb(0, 4, 17);
+    padding: 0;
+  }
+
+  .menu-item {
+    display: block;
+    text-align: center;
+    border-bottom: 5px solid rgb(0, 4, 17);
+  }
+
+  .menu-item:last-child {
+    border-bottom: none;
+  }
+
+  .menu-item p:last-child {
+    padding-bottom: 2rem;
+  }
+
+  .menu-item h4:first-child {
+    width: auto;
   }
 
   /* footer section */
@@ -342,5 +401,44 @@ footer p {
     height: auto;
     padding-top: 2.5vh;
     font-size: 2rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-footer .footer-nav {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .main-footer label {
+    margin: auto 0;
+  }
+
+  .main-footer button {
+    width: 85%;
+    font-size: 2rem;
+    margin: 0 1rem;
+  }
+
+  .main-footer input {
+    width: 85%;
+    margin: 0 1rem;
+  }
+
+  .footer-nav .links {
+    flex-direction: column;
+  }
+
+  footer p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 7rem;
   }
 }
